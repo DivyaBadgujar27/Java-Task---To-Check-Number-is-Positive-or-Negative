@@ -1,0 +1,36 @@
+import java.io.DataInputStream;
+import java.io.IOException;
+
+class PositiveOrNegative
+{
+	public static void main(String args[])
+	{
+		int num = 0;
+		DataInputStream d = new DataInputStream (System.in);
+		System.out.print("To Check Whether Given Number is Positive or Negative");
+		try
+		{
+			System.out.print("\n\nEnter the Number = ");
+			num = Integer.parseInt(d.readLine());
+		}
+		catch(IOException ioe) {}
+		if (num == 0)
+		{
+			System.out.print("\n\nGiven Number is Null");
+			System.out.print("\n\n");
+		}
+		else
+		{
+			if(num > 0)
+			{
+				System.out.print("\n\nGiven Number is Positive");
+				System.out.print("\n\n");
+			}
+			else
+			{
+				System.out.print("\n\nGiven Number is Negative");
+				System.out.print("\n\n");
+			}
+		}
+	}
+}
